@@ -1,0 +1,154 @@
+<!--
+以<>括起來的為標籤
+每層都需縮排(更方便閱讀)
+在開始標籤(無/的<>)中的預選字(?)為屬性
+屬性填入順序沒差?
+標籤裡的文字在網頁上有2種顯示方式 為有換行及沒換行
+-->
+<!DOCTYPE html><!--告訴瀏覽器此檔案類型為html-->
+<html>
+    <head><!--放網頁資訊-->
+        
+        <!--meta-->
+        <meta charset="UTF-8"></meta><!--告訴瀏覽器編碼方式為UTF-8(可看懂中文)-->
+        <meta name="decription" content="content為網站搜尋結果的描述欄位"/>
+        <meta name="author" content="rex09_"/> 
+        <meta name="keywords" content="rex09_, html, 筆記"/> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/><!--根據裝置等比例縮放頁面大小 ,初始為100%-->
+        
+        
+        <!--meta只要中間沒東西都能省略為<meta/>-->
+
+        <title>rex09_的html筆記</title><!--網頁(書籤頁)標題-->
+    </head>
+    <body><!--放網頁內容-->
+        hello 我是rex09_ ,此網頁為html筆記及實作 ,有些部分寫在程式碼的註解裡
+        <!--<h>為標題 ,有h1~h6六種模式 ,字體由大到小 ,h1通常一個網頁只有一個-->
+        <h1>h為標題 ,有h1~h6六種模式 ,字體由大到小 ,h1通常一個網頁只有一個,此為h1</h1>
+        <h6>此為h6</h6>
+        <!--<h></h>-->
+
+        <!--<p>為一般文字段落-->
+        <p>p為一般文字段落</p>
+
+        <!--<b>為粗體字-->
+        <b>b為粗體字</b>
+
+        <!--<i>為斜體字-->
+        <i>i為斜體字</i>
+
+        <p><b><i>b,i可一起使用 ,層順序不影響</i></b></p>
+
+        <!--<br>為換行 ,通常不會在br之間加任何東西 於是可省略為<br/>-->
+        <br/>
+        <p>br為換行 ,通常不會在br之間加任何東西 於是可省略為br/</p>
+        
+        <!--hr為分隔線 ,同br ,可省略為hr/-->
+        <hr/>
+        <p>hr為分隔線 ,同br ,可省略為hr/</p>
+
+        <!--連結-->
+        <!--a為連結 ,需在href屬性欄位中填入連結網址 ,並在中間填入將包含連結網址的顯示文字-->
+        <a href="https://google.com">google網站</a>
+        <br/>
+        <a href="html2.html">內部網站直接寫檔名(同資料夾的話)即可</a>
+        <br/>
+        <!--不同資料夾的話需在網址開頭加入/或../來移入或移出當前位置至目標位置-->
+        <a href="Valentine_haachama.jpg">a也可連結至圖片</a>
+        <br/>
+        <a href="html_test_video.mp4">或影片之類的檔案</a>
+        <br/>
+
+        <!--img為不跳轉直接在網頁上顯示圖片 ,需在src屬性中放入網址或檔名 ,中間不夾東西-->
+        <!--調整大小可用width="數字" 和 height="數字" 兩種屬性 ,數字單位為感光點數(乘積為畫素)-->
+        <!--只寫其中一項則為等比例縮放-->
+        <img src="suichan.jpg" width="250" height="250"/>
+
+        <!--影片-->
+        <!--video為載入影片 ,和img一樣 ,差在需用controls使其可播放 ,及中間可加入載入失敗時的顯示資訊-->
+        <video src="html_test_video.mp4" controls width="250">影片載入失敗</video>
+        <!--嵌入yt影片:點選目標影片下方的[分享]->嵌入->複製代碼->在目標網頁的html程式中直接貼上 ,其內屬性可改-->
+        <iframe width="250" src="https://www.youtube.com/embed/SZpA9lgiSQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <!--列表-->
+        <!--ul為顯示黑點-->
+        <!--ol預設為顯示排序數字 ,可加入type屬性-->
+        <ul>
+            <li>ul</li>
+            <li>黑點</li>
+        </ul>
+        <ol>
+            <li>ol</li>
+            <li>預設</li>
+        </ol>
+        <ol type="A">
+            <li>ol</li>
+            <li>type="A"</li><!--還有a(從小寫a開始) i(小寫羅馬) I(大寫羅馬)三種type-->
+        </ol>
+
+        <!--表格-->
+        <!--table為表格 ,可用width屬性調整寬度 ,tr為直排 ,td為橫排-->
+        <table width="100">
+            <tr>
+                <td>2</td>
+                <td>x</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>的</td>
+                <td>表</td>
+                <td>格</td>
+            </tr>
+        </table>
+
+        <!--容器-->
+        <!--div為容器 ,主要用來簡化統一容器內的某些相同操作 ,如排版或美化(css) ,單純加div不會有任何效果 ,會換行-->
+        <div style="color: red;">
+            <ul>
+                <li>此為列表</li>
+            </ul>
+            <table>
+                <tr>
+                    <td>此為表格 ,使用div統一紅色字體(css)</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!--span為容器 ,同div ,但不會換行-->
+        <!--會換行叫block, 不會叫inline-->
+        <span>span1</span>
+        <span>span2</span>
+        <hr/>
+        <div>div1</div>
+        <div>div2</div>
+
+        <!--html輸入標籤-->
+        <!--input為輸入標籤 ,使用type屬性指定輸入類型 ,可加入placeholder屬性新增預顯示字幕,中間無內容-->
+        <input type="text" placeholder="placeholder預顯示字幕"/><!--純文本-->
+        <br/>
+        <br/>
+        <input type="password"/><!--遮擋文字(密碼)-->
+        <br/>
+        <br/>
+        <input type="date"/><!--日期-->
+        <br/>
+        <br/>
+        <input type="range"/><!--拉條-->
+        <br/>
+        <br/>
+        <input type="file"/><!--上傳檔案-->
+        <br/>
+        <br/>
+        <input type="checkbox"/><!--打勾方格-->
+        <br/>
+        <br/>
+        <textarea>textaera可輸入很多文字及自由調整輸入框大小 ,打在中間的字會預先輸入其中</textarea><!--textaera可輸入很多文字及自由調整輸入框大小 ,打在中間的字會預先輸入其中-->
+        <br/>
+        <br/>
+
+        <a href="https://www.w3schools.com/html/">W3c的HTML Tutorial ,非常詳細的html教學網站</a>
+
+        <p>檢查html原始碼方式:f12 -> elements 或對目標點右鍵 -> 檢查</p>
+    </body>
+</html>
+<!---->
